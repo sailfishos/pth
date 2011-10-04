@@ -1,0 +1,71 @@
+* Tue Feb 16 2010 Anas Nashif <anas.nashif@intel.com> - 2.0.7
+- Use spectacle
+
+* Fri Apr 24 2009 Anas Nashif <anas.nashif@intel.com> 2.0.7
+- Removed unneeded config patch
+
+* Sun Nov 02 2008 Anas Nashif <anas.nashif@intel.com> 2.0.7
+- disable check
+
+* Fri Feb 08 2008 Michael Schwendt <mschwendt@fedoraproject.org>
+- rebuilt for GCC 4.3 as requested by Fedora Release Engineering
+
+* Sun Oct 21 2007 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.7-5
+- Patch pth-config.
+  This shall fix the multiarch conflict in pth-devel (#342961).
+  It must not return -I/usr/include and -L/usr/{lib,lib64} either,
+  since these are default search paths already.
+- Replace the config.status CFLAGS sed expr with a patch.
+
+* Tue Aug 21 2007 Michael Schwendt <mschwendt@fedoraproject.org>
+- rebuilt
+
+* Thu Aug  2 2007 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.7-2
+- Clarify licence (LGPLv2+).
+
+* Sat Nov 25 2006 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.7-1
+- Update to 2.0.7 (very minor maintenance updates only).
+
+* Mon Aug 28 2006 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.6-3
+- rebuilt
+
+* Mon May 22 2006 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.6-2
+- Insert -g into CFLAGS after configure script removes it.
+- Disable configure check for obsolete sigstack(), which segfaults.
+
+* Thu Feb 16 2006 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.6-1
+- Update to 2.0.6.
+
+* Fri Oct  7 2005 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.5-1
+- Update to 2.0.5.
+- Don't build static archive.
+
+* Fri May 13 2005 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.4-3
+- rebuilt
+
+* Thu Apr  7 2005 Michael Schwendt <mschwendt@fedoraproject.org> - 2.0.4-2
+- rebuilt
+
+* Thu Feb 24 2005 Michael Schwendt <mschwendt@fedoraproject.org> - 0:2.0.4-1
+- Update to 2.0.4.
+- Remove ancient changelog entries which even pre-date Fedora.
+
+* Tue Dec 14 2004 Michael Schwendt <mschwendt@fedoraproject.org> - 0:2.0.3-1
+- Update to 2.0.3, minor and common spec adjustments + LGPL, %%check,
+  use URLs for official GNU companion sites.
+
+* Thu Oct 07 2004 Adrian Reber <adrian@lisas.de> - 0:2.0.2-0.fdr.2
+- iconv-ing spec to utf8
+
+* Wed Oct 06 2004 Adrian Reber <adrian@lisas.de> - 0:2.0.2-0.fdr.1
+- Update to 2.0.2 and current Fedora guidelines.
+- added workaround for make -j problem
+
+* Sat Mar 22 2003 Ville Skyttä <ville.skytta at iki.fi> - 0:2.0.0-0.fdr.1
+- Update to 2.0.0 and current Fedora guidelines.
+- Exclude %%{_libdir}/*.la
+
+* Fri Feb  7 2003 Ville Skyttä <ville.skytta at iki.fi> - 1.4.1-1.fedora.1
+- First Fedora release, based on Ryan Weaver's work.
+- Move (most of) docs to main package.
+
