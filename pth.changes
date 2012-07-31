@@ -1,3 +1,7 @@
+* Tue Jul 31 2012 Carsten Munk <carsten@merproject.org> - 2.0.7
+- aclocal.m4 stupidly fails to work when under linux 3.x kernel. 
+- cannot work with reconfigure either.
+
 * Tue Feb 16 2010 Anas Nashif <anas.nashif@intel.com> - 2.0.7
 - Use spectacle
 

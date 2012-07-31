@@ -16,6 +16,7 @@ Source0:    ftp://ftp.gnu.org/gnu/pth/pth-%{version}.tar.gz
 Source1:    ftp://ftp.gnu.org/gnu/pth/pth-%{version}.tar.gz.sig
 Source100:  pth.yaml
 Patch0:     pth-2.0.7-dont-remove-gcc-g.patch
+Patch1:     pth-2.0.7-fixbuildlinux.patch
 Requires(post):  /sbin/ldconfig
 Requires(postun):  /sbin/ldconfig
 
@@ -43,14 +44,13 @@ Development headers and libraries for GNU Pth.
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1
+%patch1 -p1
 # >> setup
 # << setup
 
 %build
 # >> build pre
 # << build pre
-
-%configure --disable-static
 
 # >> build post
 %configure --disable-static ac_cv_func_sigstack='no'

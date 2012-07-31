@@ -10,6 +10,7 @@ Sources:
     - ftp://ftp.gnu.org/gnu/pth/pth-%{version}.tar.gz.sig
 Patches:
     - pth-2.0.7-dont-remove-gcc-g.patch
+    - pth-2.0.7-fixbuildlinux.patch
 Description: |
     Pth is a very portable POSIX/ANSI-C based library for Unix platforms
     which provides non-preemptive priority-based scheduling for multiple
@@ -17,7 +18,7 @@ Description: |
     All threads run in the same address space of the server application,
     but each thread has it's own individual program-counter, run-time
     stack, signal mask and errno variable.
-
+Configure: none
 Builder: no-make
 SubPackages:
     - Name: devel
