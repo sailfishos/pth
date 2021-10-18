@@ -1,0 +1,11 @@
+--- pth-2.0.7-orig/pth_high.c	2021-10-19 01:30:46.424339285 +0200
++++ pth-2.0.7/pth_high.c	2021-10-19 01:31:08.328340404 +0200
+@@ -131,7 +131,7 @@
+     int rv;
+ 
+     /* change the explicitly remembered signal mask copy for the scheduler */
+-    if (set != NULL)
++    if (set != NULL && 0)
+       pth_sc(sigprocmask)(how, &(pth_current->mctx.sigs), NULL);
+ 
+     /* change the real (per-thread saved/restored) signal mask */
