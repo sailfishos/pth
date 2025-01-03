@@ -21,8 +21,6 @@ All threads run in the same address space of the server application,
 but each thread has it's own individual program-counter, run-time
 stack, signal mask and errno variable.
 
-
-
 %package devel
 Summary:    Development headers and libraries for GNU Pth
 Requires:   %{name} = %{version}-%{release}
@@ -30,36 +28,28 @@ Requires:   %{name} = %{version}-%{release}
 %description devel
 Development headers and libraries for GNU Pth.
 
-
 %prep
 %autosetup -p1 -n %{name}-%{version}
 
 %build
-%configure --disable-static ac_cv_func_sigstack='no'
+%configure --disable-static --with-mctx-mth=mcsc --with-mctx-dsp=sc --with-mctx-stk=mc ac_cv_func_sigstack='no'
 
 # this is necessary; without it make -j fails
 make pth_p.h
-make %{?_smp_mflags}
-
-
+%make_build
 
 %install
 %make_install
-
 
 %post -p /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
 
-
 %files
-%defattr(-,root,root,-)
 %license COPYING
 %{_libdir}/*.so.*
 
-
 %files devel
-%defattr(-,root,root,-)
 %doc HACKING
 %doc ANNOUNCE AUTHORS ChangeLog HISTORY NEWS PORTING README
 %doc SUPPORT TESTS THANKS USERS
